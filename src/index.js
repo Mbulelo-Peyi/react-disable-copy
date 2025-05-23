@@ -17,7 +17,7 @@ const DisableCopyWrapper = ({ children }) => {
     };
   }, []);
 
-  return <div>{children}</div>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
 export default DisableCopyWrapper;
