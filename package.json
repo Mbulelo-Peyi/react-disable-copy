@@ -1,0 +1,40 @@
+{
+  "name": "react-disable-copy",
+  "version": "1.0.0",
+  "description": "A React wrapper component to disable copy, cut, and right-click context menu.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist --copy-files",
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "copy",
+    "disable",
+    "wrapper",
+    "no-copy",
+    "protect"
+  ],
+  "author": "Mbulelo Phillip Peyi",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^14.3.1",
+    "babel-jest": "^29.0.0",
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  }
+}
