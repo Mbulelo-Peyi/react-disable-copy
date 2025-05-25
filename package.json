@@ -16,7 +16,7 @@
     "protect"
   ],
   "files": [
-    "dist/index.js",
+    "dist",
     "README.md",
     "LICENSE"
   ],
