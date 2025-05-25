@@ -1,6 +1,6 @@
 {
   "name": "react-disable-copy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React wrapper component to disable copy, cut, and right-click context menu.",
   "main": "dist/index.js",
   "scripts": {
