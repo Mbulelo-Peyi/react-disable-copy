@@ -10,21 +10,31 @@ Created as part of volunteer work with [GoodWorkHub](https://goodworkhub.org) by
 
 ---
 
-## Installation & Usage
+## Installation
 
 ```bash
 npm install react-disable-copy
 
-
-
+```
+## Usage
 ```jsx
 
+import React from 'react';
 import DisableCopyWrapper from 'react-disable-copy';
 
 function App() {
   return (
-    <DisableCopyWrapper>
+    <DisableCopyWrapper
+      disableCopy={true}
+      disableCut={true}
+      disableContextMenu={true}
+      showWarning={true}
+      warningMessage="Copying is not allowed on this app."
+    >
       <YourApp />
     </DisableCopyWrapper>
   );
 }
+
+export default App;
+```
