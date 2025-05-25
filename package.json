@@ -1,10 +1,10 @@
 {
   "name": "react-disable-copy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React wrapper component to disable copy, cut, and right-click context menu.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel src --out-dir dist --copy-files",
+    "build": "tsc",
     "test": "jest"
   },
   "keywords": [
@@ -16,9 +16,9 @@
     "protect"
   ],
   "files": [
-  "dist/index.js",
-  "README.md",
-  "LICENSE"
+    "dist/index.js",
+    "README.md",
+    "LICENSE"
   ],
   "author": "Mbulelo Phillip Peyi",
   "license": "MIT",
@@ -30,16 +30,23 @@
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.27.1",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^14.3.1",
+    "@types/jest": "^29.5.14",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
     "babel-jest": "^29.0.0",
     "jest": "^29.0.0",
-    "jest-environment-jsdom": "^29.7.0"
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.3.4",
+    "typescript": "^5.8.3"
   },
   "babel": {
     "presets": [
       "@babel/preset-env",
-      "@babel/preset-react"
+      "@babel/preset-react",
+      "@babel/preset-typescript"
     ]
   },
   "dependencies": {
@@ -286,7 +293,7 @@
     "punycode": "^2.3.1",
     "pure-rand": "^6.1.0",
     "querystringify": "^2.2.0",
-    "react": "^18.3.1",
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^18.3.1",
     "react-is": "^17.0.2",
     "readdirp": "^3.6.0",

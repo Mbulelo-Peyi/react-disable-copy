@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import DisableCopyWrapper from '../index';
+import { DisableCopyWrapper } from '../index';
 
 describe('DisableCopyWrapper', () => {
   it('renders children correctly', () => {

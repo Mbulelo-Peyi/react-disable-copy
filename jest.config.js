@@ -1,8 +1,9 @@
 module.exports = {
-  testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/src/setupTests.js"],
-  moduleFileExtensions: ["js", "jsx"],
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   transform: {
-    "^.+\\.jsx?$": "babel-jest"
-  }
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+  },
 };
