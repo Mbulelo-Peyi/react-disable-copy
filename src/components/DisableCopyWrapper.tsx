@@ -8,6 +8,9 @@ const DisableCopyWrapper: React.FC<DisableCopyWrapperProps> = ({
   disableContextMenu = true,
   showWarning = false,
   warningMessage = 'This action is disabled.',
+  onWarn,
+  isScoped = false,
+  wrapperClassName,
 }) => {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
 
@@ -15,28 +18,38 @@ const DisableCopyWrapper: React.FC<DisableCopyWrapperProps> = ({
     (e: Event) => {
       e.preventDefault();
       if (showWarning) {
-        alert(warningMessage);
+        if (onWarn) {
+          onWarn();
+        } else {
+          alert(warningMessage);
+        }
       }
     },
-    [showWarning, warningMessage]
+    [showWarning, warningMessage, onWarn]
   );
 
   useEffect(() => {
-    const node = wrapperRef.current;
-    if (!node) return;
+    const target: HTMLElement | Document = isScoped ? wrapperRef.current! : document;
+    if (!target) return;
 
-    if (disableCopy) node.addEventListener('copy', handleEvent);
-    if (disableCut) node.addEventListener('cut', handleEvent);
-    if (disableContextMenu) node.addEventListener('contextmenu', handleEvent);
+    if (disableCopy) target.addEventListener('copy', handleEvent);
+    if (disableCut) target.addEventListener('cut', handleEvent);
+    if (disableContextMenu) target.addEventListener('contextmenu', handleEvent);
 
     return () => {
-      if (disableCopy) node.removeEventListener('copy', handleEvent);
-      if (disableCut) node.removeEventListener('cut', handleEvent);
-      if (disableContextMenu) node.removeEventListener('contextmenu', handleEvent);
+      if (disableCopy) target.removeEventListener('copy', handleEvent);
+      if (disableCut) target.removeEventListener('cut', handleEvent);
+      if (disableContextMenu) target.removeEventListener('contextmenu', handleEvent);
     };
-  }, [disableCopy, disableCut, disableContextMenu, handleEvent]);
+  }, [isScoped, disableCopy, disableCut, disableContextMenu, handleEvent]);
 
-  return <div ref={wrapperRef} style={{ all: 'unset' }}>{children}</div>;
+  return isScoped ? (
+    <div ref={wrapperRef} className={wrapperClassName}>
+      {children}
+    </div>
+  ) : (
+    <React.Fragment>{children}</React.Fragment>
+  );
 };
 
 export default DisableCopyWrapper;

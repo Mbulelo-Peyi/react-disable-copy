@@ -7,4 +7,7 @@ export interface DisableCopyWrapperProps {
   disableContextMenu?: boolean;
   showWarning?: boolean;
   warningMessage?: string;
+  onWarn?: () => void; 
+  isScoped?: boolean;
+  wrapperClassName?: string;
 }

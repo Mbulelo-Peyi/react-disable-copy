@@ -1,20 +1,18 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "CommonJS",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": true,
     "declaration": true,
-    "declarationDir": "dist/types",
     "emitDeclarationOnly": false,
     "outDir": "dist",
-    "strict": true,
-    "moduleResolution": "Node",
-    "esModuleInterop": true,
     "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "moduleResolution": "Node"
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist", "test"]
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx"]
 }
