@@ -1,17 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "CommonJS",
+    "target": "ES2019",                      // ES2019 for wider compatibility
+    "module": "CommonJS",                    // Good for Node publishing
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "declaration": true,
+    "declarationDir": "dist/types",          // Clean separation of type declarations
     "emitDeclarationOnly": false,
     "outDir": "dist",
-    "jsx": "react-jsx",
+    "jsx": "react-jsx",                      // For React 17+
     "strict": true,
     "esModuleInterop": true,
+    "moduleResolution": "Node",
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "moduleResolution": "Node"
+    "allowSyntheticDefaultImports": true     // Recommended when using ES modules interop
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx"]
