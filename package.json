@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/react-disable-copy.git"
+    "url": "git+https://github.com/Mbulelo-Peyi/react-disable-copy.git"
   },
   "keywords": [
     "react",
@@ -26,9 +26,9 @@
   "author": "Mbulelo Phillip Peyi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/your-username/react-disable-copy/issues"
+    "url": "https://github.com/Mbulelo-Peyi/react-disable-copy/issues"
   },
-  "homepage": "https://github.com/your-username/react-disable-copy#readme",
+  "homepage": "https://github.com/Mbulelo-Peyi/react-disable-copy#readme",
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
