@@ -1,6 +1,6 @@
 {
   "name": "react-disable-copy",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A React component that disables copy, cut, and paste actions on its children.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
